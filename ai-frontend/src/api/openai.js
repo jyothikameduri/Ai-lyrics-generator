@@ -1,6 +1,8 @@
+const apiUrl = process.env.API_URL;
+
 export const generateLyrics = async (mood) => {
   try {
-    const response = await fetch("http://localhost:5000/api/generate-lyrics", {
+    const response = await fetch(`${apiUrl}/generate`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -11,13 +13,13 @@ export const generateLyrics = async (mood) => {
     const data = await response.json();
 
     if (!response.ok) {
-      console.error("❌ API Error:", data.error);
+      console.error(" API Error:", data.error);
       return `API Error: ${data.error}`;
     }
 
     return data.lyrics;
   } catch (err) {
-    console.error("❌ Network Error:", err);
+    console.error(" Network Error:", err);
     return "Oops! Something went wrong.";
   }
 };
