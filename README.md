@@ -12,7 +12,7 @@ A fun and creative web app that generates personalized song lyrics based on your
 
 ## 🛠 Tech Stack
 
-- **Frontend**: React.js, Vite, Tailwind CSS
+- **Frontend**: React.js, Tailwind CSS
 - **Backend**: Node.js, Express.js
 - **AI Model**: LLaMA 3 via Groq API
 - **Deployment**: Render
